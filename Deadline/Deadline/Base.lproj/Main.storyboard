@@ -26,16 +26,46 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h1C-4L-OTF">
+                                <rect key="frame" x="15" y="623" width="345" height="54"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPE-qt-lSV">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="44"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <state key="normal" title="New Deadline">
+                                            <color key="titleColor" red="1" green="0.1764705882352941" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="newDeadlineButtonClicked:" destination="51I-QW-vOf" eventType="touchUpInside" id="Zh8-8s-d3o"/>
+                                            <action selector="newDeadlineButtonTouchDown:" destination="51I-QW-vOf" eventType="touchDown" id="XMk-fT-4gp"/>
+                                            <action selector="newDeadlineButtonTouchDragExit:" destination="51I-QW-vOf" eventType="touchDragExit" id="Jjd-FT-5G5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="gPE-qt-lSV" firstAttribute="top" secondItem="h1C-4L-OTF" secondAttribute="top" id="Od5-Bb-iov"/>
+                                    <constraint firstAttribute="bottom" secondItem="gPE-qt-lSV" secondAttribute="bottom" constant="10" id="Yjk-hc-qHM"/>
+                                    <constraint firstItem="gPE-qt-lSV" firstAttribute="leading" secondItem="h1C-4L-OTF" secondAttribute="leading" id="ZFn-0k-bHa"/>
+                                    <constraint firstAttribute="height" constant="54" id="mj5-QC-PHy"/>
+                                    <constraint firstAttribute="trailing" secondItem="gPE-qt-lSV" secondAttribute="trailing" id="pCF-sg-qdM"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="h1C-4L-OTF" firstAttribute="leading" secondItem="31g-tv-hFp" secondAttribute="leading" constant="15" id="3g1-qL-jM0"/>
                             <constraint firstItem="ilV-f6-8NC" firstAttribute="top" secondItem="bYi-gR-qMI" secondAttribute="bottom" id="561-38-ape"/>
+                            <constraint firstAttribute="trailing" secondItem="h1C-4L-OTF" secondAttribute="trailing" constant="15" id="Du1-kd-w5j"/>
                             <constraint firstItem="bYi-gR-qMI" firstAttribute="leading" secondItem="31g-tv-hFp" secondAttribute="leading" id="Nk9-RO-1pM"/>
                             <constraint firstAttribute="trailing" secondItem="bYi-gR-qMI" secondAttribute="trailing" id="T6o-Ui-haW"/>
                             <constraint firstItem="bYi-gR-qMI" firstAttribute="top" secondItem="WSi-h7-g4h" secondAttribute="bottom" id="Y1c-eP-d0Q"/>
+                            <constraint firstItem="ilV-f6-8NC" firstAttribute="top" secondItem="h1C-4L-OTF" secondAttribute="bottom" constant="-10" id="e6Q-Rz-nQP"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="newDeadlineButton" destination="gPE-qt-lSV" id="Zt9-lc-Knt"/>
+                        <outlet property="newDeadlineView" destination="h1C-4L-OTF" id="iMd-FE-gaC"/>
                         <outlet property="tableView" destination="bYi-gR-qMI" id="T3F-3W-tgi"/>
                     </connections>
                 </viewController>

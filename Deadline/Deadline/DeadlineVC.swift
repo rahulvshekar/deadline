@@ -11,11 +11,34 @@ import UIKit
 class DeadlineVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var newDeadlineButton: UIButton!
+    @IBOutlet weak var newDeadlineView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        setupNewDeadlineView()
     }
+    
+    func setupNewDeadlineView() {
+        setupNormalShadow()
+    
+    }
+    
+    func setupNormalShadow() {
+        newDeadlineView.layer.shadowColor = UIColor.black.cgColor
+        newDeadlineView.layer.shadowOffset = CGSize(width: 0, height: -2)
+        newDeadlineView.layer.shadowOpacity = 0.5
+        newDeadlineView.layer.shadowRadius = 6
+    }
+    
+    func setupDepressedShadow() {
+        newDeadlineView.layer.shadowColor = UIColor.black.cgColor
+        newDeadlineView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        newDeadlineView.layer.shadowOpacity = 0.8
+        newDeadlineView.layer.shadowRadius = 3
+    }
+    
     
     func getOpacity(_ forIndexPath: IndexPath) -> Double {
         let maxOpacity = 1.0
@@ -25,6 +48,27 @@ class DeadlineVC: UIViewController {
         let incrementOpacity = range/Double(numberOfRows)
         let presentRowOpacity = 1.0 - (Double(forIndexPath.row)*(incrementOpacity))
         return presentRowOpacity
+    }
+    
+    @IBAction func newDeadlineButtonClicked(_ sender: Any) {
+        setupNormalShadow()
+        UIView.animate(withDuration: 0.25, animations: {
+            self.newDeadlineView.transform = CGAffineTransform.identity
+        }, completion: nil)
+    }
+    
+    @IBAction func newDeadlineButtonTouchDown(_ sender: Any) {
+        setupDepressedShadow()
+        UIView.animate(withDuration: 0.25, animations: { 
+            self.newDeadlineView.transform = CGAffineTransform(scaleX: 0.97, y: 0.97)
+        }, completion: nil)
+    }
+    
+    @IBAction func newDeadlineButtonTouchDragExit(_ sender: Any) {
+        setupNormalShadow()
+        UIView.animate(withDuration: 0.25, animations: {
+            self.newDeadlineView.transform = CGAffineTransform.identity
+        }, completion: nil)
     }
 
 }
