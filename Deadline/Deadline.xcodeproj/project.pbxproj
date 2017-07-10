@@ -13,6 +13,9 @@
 		B7289BEF1F135C33005492C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7289BED1F135C33005492C1 /* LaunchScreen.storyboard */; };
 		B7289BFA1F135C34005492C1 /* DeadlineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7289BF91F135C34005492C1 /* DeadlineTests.swift */; };
 		B7289C051F135C34005492C1 /* DeadlineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7289C041F135C34005492C1 /* DeadlineUITests.swift */; };
+		B7289C131F135D61005492C1 /* DeadlineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7289C121F135D61005492C1 /* DeadlineVC.swift */; };
+		B7289C161F1364B1005492C1 /* DeadlineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7289C141F1364B1005492C1 /* DeadlineCell.swift */; };
+		B7289C171F1364B1005492C1 /* DeadlineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7289C151F1364B1005492C1 /* DeadlineCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,9 @@
 		B7289C001F135C34005492C1 /* DeadlineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeadlineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7289C041F135C34005492C1 /* DeadlineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadlineUITests.swift; sourceTree = "<group>"; };
 		B7289C061F135C34005492C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7289C121F135D61005492C1 /* DeadlineVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeadlineVC.swift; sourceTree = "<group>"; };
+		B7289C141F1364B1005492C1 /* DeadlineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeadlineCell.swift; sourceTree = "<group>"; };
+		B7289C151F1364B1005492C1 /* DeadlineCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeadlineCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,9 @@
 			isa = PBXGroup;
 			children = (
 				B7289BE41F135C33005492C1 /* AppDelegate.swift */,
+				B7289C121F135D61005492C1 /* DeadlineVC.swift */,
+				B7289C141F1364B1005492C1 /* DeadlineCell.swift */,
+				B7289C151F1364B1005492C1 /* DeadlineCell.xib */,
 				B7289BE81F135C33005492C1 /* Main.storyboard */,
 				B7289BEB1F135C33005492C1 /* Assets.xcassets */,
 				B7289BED1F135C33005492C1 /* LaunchScreen.storyboard */,
@@ -235,6 +244,7 @@
 				B7289BEF1F135C33005492C1 /* LaunchScreen.storyboard in Resources */,
 				B7289BEC1F135C33005492C1 /* Assets.xcassets in Resources */,
 				B7289BEA1F135C33005492C1 /* Main.storyboard in Resources */,
+				B7289C171F1364B1005492C1 /* DeadlineCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +269,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7289C131F135D61005492C1 /* DeadlineVC.swift in Sources */,
 				B7289BE51F135C33005492C1 /* AppDelegate.swift in Sources */,
+				B7289C161F1364B1005492C1 /* DeadlineCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
